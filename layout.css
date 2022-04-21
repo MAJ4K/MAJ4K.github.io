@@ -1,24 +1,14 @@
 :root {
 	--palette0: #000;
 	--palette1: darkgoldenrod;
-	--palette2: #777;
+	--palette2: #333;
 	--cardImg:none;
 }
 *, *::before, *::after{
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-}
-body::before{
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: 200vh;
-	z-index: -1;
-	top: 0%;
-	background-image: conic-gradient(var(--palette0),var(--palette2),var(--palette0));
-	filter: blur(5px);
-	overflow: hidden;
+	text-decoration: none;
 }
 body{
 	margin: 0;
@@ -26,6 +16,7 @@ body{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+  background-color: var(--palette2);
 }
 
 main{
@@ -40,6 +31,7 @@ main{
 #ME {
 	grid-area: "me";
 }
+#ME>div img{ height: 64px;}
 #SKILLS {
 	grid-area: "skill";
 }
@@ -55,6 +47,7 @@ main{
 	overflow-x: scroll;
 	overflow-y: hidden;
 	max-width: 95vw;
+	scrollbar-width:none;
 }
 .scroller>*{
 	transform: skewY(15deg);
@@ -71,23 +64,52 @@ main{
 	gap: 10px;
 	margin: 10px;
 	grid-template-columns: repeat(12,1fr);
-	grid-auto-rows: 15em;
 	transform: skewY(-15deg);
 }
+.card::before{
+	content: "";
+	grid-row: 1/-1;
+	grid-column: 1;
+	background-image: var(--cardImg);
+}
+.card.active::before{
+	position: absolute;
+	width: 15rem;
+	height: 15rem;
+	top: 3rem;
+	left: calc(50% - 7.5rem);
+	border-radius: inherit;
+	transform: skewY(15deg);
+}
 .card{
+	height: 14rem;
 	display: grid;
 	grid: 15rem auto auto / 1fr;
 	border-radius: 2em;
 	grid-column: span 3;
+	background-color: var(--palette1);
 	grid-row: span 1;
 	overflow: hidden;
-	background-color: var(--palette1);
 	color: black;
+	cursor: pointer;
+	transform: scale(1);
+	transition: all ease-in-out 100ms;
 }
+.card:hover{transform: scale(1.04);}
+.card.active:hover{transform: scale(1);}
 .card.Important {
+	height: 30rem;
 	grid-column: span 6;
 	grid-row: span 2;
 	grid: 30rem auto auto / 1fr;
+}
+.card.active{
+	grid-template-rows: auto auto auto;
+  cursor: initial;
+}
+.card.active{
+	grid-column: 1/-1;
+	height: max-content;
 }
 .card>*{
 	transform: skewY(15deg);
@@ -99,31 +121,33 @@ main{
 	align-self: center;
 	justify-self: center;
 }
-.card>p{grid-row: 2; grid-column: 1;}
-.card>div{grid-row: 3; grid-column: 1;}
-.card>.preview{
-	grid-column: 1;
-	grid-row: 1;
-	width: 100%;
-	height: 130%;
-	justify-self: center;
-	align-self: center;
-	z-index: -0;
-	background-image: var(--cardImg);
-	background-position: center;
+.card.active>h3{
+	padding: 10rem 0 8rem 0;
 }
+.card.active>p{
+	grid-row: 2; grid-column: 1;
+	padding: 0 2rem;
+}
+.card>div{
+	grid-row: 3; grid-column: 1;
+	align-self: flex-end;
+}
+.card a>img{height: 100px; margin: 1em;}
 
 #PhoneApp{--cardImg: url("Images/Bubbles.jpeg");}
 #Vulkan{--cardImg: url("Images/Bubbles.jpeg");}
 
 @media only screen and (max-width: 650px) {
-	body {
-	  background-color: lightblue;
+	.scroller{
+		scrollbar-width: 10px;
 	}
 	#Cgrid{
 		display: grid;
 		gap: 5px;
 		grid-template-columns: repeat(6,1fr);
+	}
+	.card.active>p{
+		grid-row: 2; grid-column: 1;
 	}
 	#Vulkan{grid-row: 1/3;}
   }
