@@ -1,0 +1,41 @@
+:root{
+	--palette0: rgba(255, 255, 255, 0.55);
+}
+#SCREEN{
+	color: var(--palette0);
+}
+
+main{display: none;}
+main.active{
+	display: grid;
+	padding: 0.5em;
+	gap: 1em;
+	height: 100%;
+}
+main::before{
+	content: attr(title);
+	font-weight: bolder;
+	grid-area: 1/1/-1/1;
+}
+
+#menu>div{
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+#menu>div>*{
+	text-align: left;
+}
+h2>p{
+	width: min-content;
+	border-bottom: 0.3rem solid var(--palette0) ;
+}
+h2>p::after{
+	position: absolute;
+	content: "";
+	background-clip: content-box;
+	padding: 0.2em;
+	width: 1em; height: 1em;
+	background-color: var(--palette0);
+	clip-path: circle(30%);
+}

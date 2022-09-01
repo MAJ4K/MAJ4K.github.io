@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" 
+		content="width=device-width, initial-scale=1.0">
+	<title>Michael A. Jenkins</title>
+	<link rel="stylesheet" href="layout.css">
+	<style>
+		:root{
+			--screen-size: min(100vw,100vh);
+		}
+		*{
+			box-sizing: border-box;
+			margin: 0; padding: 0;
+			text-decoration: none;
+			text-align: center;
+		}
+		body{background-color: #222; overflow: hidden;}
+		#SCREEN,.sborder{
+			background-clip: content-box;
+			background-color:rgb(156, 153, 112);
+			height: var(--screen-size);
+			width: var(--screen-size);
+			position: absolute;
+			top: 0; left: 50%;
+			transform: translate(-50%);
+			padding: 0.7em;
+			border-radius: 1.5em;
+		}
+		.sborder{
+			background-color: black;
+			padding: 0.4em;
+		}
+		.btn-container{
+			display: grid;
+			width: min-content;
+			height: min-content;
+			position: absolute;
+			bottom: 20%;
+		}
+		#WASD{
+			grid-template-areas: 
+				"... W ..."
+				"A ... D"
+				"... S ..."
+			;
+			left: 4vw;
+		}
+		#ACT{
+			grid-template-areas: 
+				"... B"
+				"E ..."
+			;
+			right: 4vw;
+		}
+		#OPTS{
+			grid-template-areas: "st ... se";
+			left: 50%; bottom: min(75vh,75vw);
+			transform: translate(-50%,0);
+		}
+		#OPTS>*{width: 5em; height: 2.5em;}
+		#WASD>*{width: 3em; height: 3em;}
+		#OPTS-BREAK{width: min(100vh,50vw);}
+		#E{width: 5.5em; height: 5.5em;}
+		#B{width: 3.5em; height: 3.5em;}
+	</style>
+</head>
+<body>
+	<div class="btn-container" id="WASD">
+		<button id="W">W</button>
+		<button id="A">A</button>
+		<button id="S">S</button>
+		<button id="D">D</button>
+	</div>
+	<div class="btn-container" id="ACT">
+		<button id="E">E</button>
+		<button id="B">B</button>
+	</div>
+	<div class="btn-container" id="OPTS">
+		<button id="se" title="i">se</button>
+		<div id="OPTS-BREAK"></div>
+		<button id="st" title="p">st</button>
+	</div>
+	<div class="sborder"></div>
+	<figure id="SCREEN">
+		<main id="landing" class="active">
+			<h1>Michael A. Jenkins</h1>
+			<p>
+				I am a Full-Stack Developer who lives in Northern Virginia. I have much experience in Networking and Cloud development. I come from a background in Graphic Design and have a passion for Video Games. Currently, I am working with Shaders and writing programs that require the GPU to do the work. 
+			</p>
+			<h4>Press Any Button To Continue</h4>
+		</main>
+		<main id="menu" title="Michael A. Jenkins">
+			<div>
+				<h2><p>Projects</p></h2>
+				<h2><p>Skills</p></h2>
+				<h2><p>Contact</p></h2>
+			</div>
+		</main>
+		<main id="skills" title="SKILLS">
+			<div>
+				<h2>Projects</h2>
+				<h2>Skills</h2>
+				<h2>Contact</h2>
+			</div>
+		</main>
+		<main id="contact" title="Michael A. Jenkins">
+			<div>
+				<h2>Projects</h2>
+				<h2>Skills</h2>
+				<h2>Contact</h2>
+			</div>
+		</main>
+	</figure>
+</body>
+<script defer src="script.js"></script>
+</html>
