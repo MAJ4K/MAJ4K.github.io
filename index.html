@@ -6,7 +6,6 @@
 	<meta name="viewport" 
 		content="width=device-width, initial-scale=1.0">
 	<title>Michael A. Jenkins</title>
-	<link rel="stylesheet" href="layout.css">
 	<style>
 		:root{
 			--screen-size: min(100vw,100vh);
@@ -20,7 +19,7 @@
 		body{background-color: #222; overflow: hidden;}
 		#SCREEN,.sborder{
 			background-clip: content-box;
-			background-color:rgb(156, 153, 112);
+			background-color:#9c9970;
 			height: var(--screen-size);
 			width: var(--screen-size);
 			position: absolute;
@@ -84,36 +83,9 @@
 		<button id="st" title="p">st</button>
 	</div>
 	<div class="sborder"></div>
-	<figure id="SCREEN">
-		<main id="landing" class="active">
-			<h1>Michael A. Jenkins</h1>
-			<p>
-				I am a Full-Stack Developer who lives in Northern Virginia. I have much experience in Networking and Cloud development. I come from a background in Graphic Design and have a passion for Video Games. Currently, I am working with Shaders and writing programs that require the GPU to do the work. 
-			</p>
-			<h4>Press Any Button To Continue</h4>
-		</main>
-		<main id="menu" title="Michael A. Jenkins">
-			<div>
-				<h2><p>Projects</p></h2>
-				<h2><p>Skills</p></h2>
-				<h2><p>Contact</p></h2>
-			</div>
-		</main>
-		<main id="skills" title="SKILLS">
-			<div>
-				<h2>Projects</h2>
-				<h2>Skills</h2>
-				<h2>Contact</h2>
-			</div>
-		</main>
-		<main id="contact" title="Michael A. Jenkins">
-			<div>
-				<h2>Projects</h2>
-				<h2>Skills</h2>
-				<h2>Contact</h2>
-			</div>
-		</main>
-	</figure>
+	<iframe id="SCREEN"
+		src="Screen/portfolio.html" frameborder="0">
+	</iframe>
 </body>
 <script defer src="script.js"></script>
 </html>

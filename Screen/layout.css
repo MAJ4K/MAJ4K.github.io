@@ -1,15 +1,18 @@
 :root{
-	--palette0: rgba(255, 255, 255, 0.55);
+	--palette0: #ffffff8c;
 }
-#SCREEN{
-	color: var(--palette0);
+*{
+	box-sizing: border-box;
+	margin: 0; padding: 0;
+	text-decoration: none;
 }
+body{height: 100vh;}
 
 main{display: none;}
 main.active{
 	display: grid;
 	padding: 0.5em;
-	gap: 1em;
+	text-align: center;
 	height: 100%;
 }
 main::before{
