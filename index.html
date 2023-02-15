@@ -1,192 +1,192 @@
 <!DOCTYPE html>
 <html lang="en" style="scroll-behavior: smooth;">
 <head>
-    <meta charset="UTF-8 ">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="a description that describes the webpage">
-    <title>Michael Jenkins</title>
-    <link rel="shortcut icon" href="Icons/MAJ.png" type="image/png">
-    <link rel="stylesheet" href="layout.css">
+	<meta charset="UTF-8 ">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="a description that describes the webpage">
+	<title>Michael Jenkins</title>
+	<link rel="shortcut icon" href="Icons/MAJ.png" type="image/png">
+	<link rel="stylesheet" href="layout.css">
 </head>
 <body>
-    <section id="Landing">
-        <h1 id="title">Michael Jenkins</h1>
-        <div id="aboutbtn" onclick="About(true)"></div>
-        <div id="about">
-            <div>
-                <a target="_blank" rel="noreferrer" href="Resume.pdf">
-                    <img src="Icons/Res.png" alt="Resume" srcset="" width="75px" height="75px">
-                </a>
-                <a target="_blank" rel="noreferrer" href="">
-                    <img src="Icons/LIn.png" alt="LinkedIn" srcset="" width="75px" height="75px">
-                </a>
-                <a target="_blank" rel="noreferrer" href="mailto:maj4k@yahoo.com" width="75px" height="75px">
-                    <img src="Icons/EMl.png" alt="Email" srcset="" width="75px" height="75px">
-                </a>
-            </div>
-            <h4>
-                I am a Full-Stack Developer who lives in Northern Virginia.
-                I have much experience in Networking and Cloud development.
-                I come from a background in Graphic Design and have a passion for Video Games.
-                Currently, I am working with Shaders and writing programs that require the GPU to do the work.
-            </h4>
-        </div>
-    </section>
-    <section id="Projects">
-        <div class="padd"></div>
-        <div class="card">
-                <h3>Disconnect: Dots</h3>
-                <h5 class="stack"><p>Godot, Android Studio</p></h5>
-                <h4>Description</h4>
-                <p>
-                    a connect the dots competitive game
-                    launched on google play uses a LAN peer-to-peer
-                    connection to connect with others.
-                </p>
-                <h4>Project Difficulties</h4>
-                <p>
-                    creating functionality that deletes lines when
-                    other players create a line over them.
-                </p>
-                <h4>Solution</h4>
-                <p>
-                    translated a mathematical formula to detect
-                    when lines are crossing and then deleting those
-                    lines based on which lines are newly created
-                </p>
-                <div>
-                    <a target="_blank" rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.maj.connection">
-                    <img src="Icons/play.png" alt="demo" class="lbtn">
-                    </a>
-                </div>
-        </div>
-        <div class="card">
-                <h3>Bug Logger</h3>
-                <h5 class="stack">
-                    <p>AWS: Cognito, RDS, Lambda, API Gateway</p>
-                    <p>HTML, CSS, JavaScript, Python, MySQL</p>
-                    <p>JsonWebToken, Virtual Environments</p>
-                </h5>
-                <h4>Description</h4>
-                <p>
-                    A bug logging app/API that uses Single Sign On
-                    to allow the client to access data stored in a table.
-                    Its purpose is to keep track of bugs that clients
-                    would find in some software.
-                </p>
-                <h4>Project Difficulties</h4>
-                <p>
-                    Starting out this project was difficult because
-                    I didn't have a grasp on AWS API Gateway and
-                    REST APIs and it took a week for me to learn
-                    and understand enough to make significant
-                    progress on the project.
-                </p>
-                <h4>Solution</h4>
-                <p>
-                    Learning REST API's helped tramendously in making progress.
-                    Also not necessary to the project, but virtual environments
-                    helped make lambda programming and testing run smoothly.
-                </p>
-                <div>
-                    <a target="_blank" rel="noopener" href="https://github.com/MAJ8K/BugTracker">
-                    <img src="Icons/gith.png" alt="git" class="lbtn">
-                    </a>
-                    <a target="_blank" rel="noopener" href="https://buglogger.auth.us-east-1.amazoncognito.com/login?client_id=1bm0vf7d2j2nhpursafqgb0sqq&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https://majdevelopment.name/BugLogger/index.html">
-                    <img src="Icons/www.png" alt="demo" class="lbtn">
-                    </a>
-                </div>
-        </div>
-        <div class="card">
-                <h3><img src="Logos/OpenGL.png" alt="OpenGL"></h3>
-                <h5 class="stack"><p>C, C++, OpenGL API</p></h5>
-                <h4>Description</h4>
-                <p>
-                    A 3D Graphics Renderer using OpenGL,
-                    a graphics API used in many other 
-                    graphics programs.
-                    I have stopped working on this project to 
-                    focus on developing with Vulkan.
-                </p>
-                <h4>Process</h4>
-                <p>
-                    OpenGL was mostly straight forward aside from instancing.
-                    However, currently I am trying to understand Vulkan's API
-                    by reading through the documentationand experimenting
-                    with the settings and functionsthe purpose is to create
-                    a rendering engine for voxels.
-                </p>
-                <div>
-                    <a target="_blank" rel="noopener" href="https://github.com/MAJ8K/OpenGL">
-                    <img src="Icons/gith.png" alt="git" class="lbtn">
-                    </a>
-                    <a target="_blank" rel="noopener" href="https://youtu.be/T3a6PjLCODk">
-                    <img src="Icons/yt.png" alt="demo" class="lbtn">
-                    </a>
-                </div>
-        </div>
-        <div class="card">
-                <h3>Square Circle</h3>
-                <h5 class="stack">
-                    <p>AWS: EC2, ALB</p>
-                    <p>JavaScript, Matter.js, Python, docker</p>
-                </h5>
-                <h4>Description</h4>
-                <p>
-                    a free online multiplayer game where you are a 
-                    square shooting at squares. A progressive 
-                    web app with controlls developed for mobile users.
-                    This app does not account for cheaters.
-                </p>
-                <h4>Project Difficulties</h4>
-                <p>
-                    Making the player stick to walls using Matter.JS
-                    was a difficult solution to come up with and implement.
-                    Creating and testing an SSL server was difficult because
-                    i couldn't use my home computer as the testing environment.
-                </p>
-                <h4>Solution</h4>
-                <p>
-                    Automating the development process seemed unneccessary until
-                    I needed a testing solution for an SSL server.
-                    Also docker containers helped with creating a reliable 
-                    server Environment that can be autoscaled for player fluctuations.
-                </p>
-                <div>
-                    <a target="_blank" rel="noopener" href="https://github.com/MAJ8K/Square-Circle">
-                    <img src="Icons/gith.png" alt="git" class="lbtn">
-                    </a>
-                    <a target="_blank" rel="noopener" href="https://majdevelopment.name/SquareCircle/index.html">
-                    <img src="Icons/www.png" alt="demo" class="lbtn">
-                    </a>
-                </div>
-        </div>
-        <div class="padd"></div>
-    </section>
-    <section id="Footer">
-        <div id="fgrid">
-            <h2 style="grid-row: 1; grid-column: 1/-1;">Skills</h2>
-            <h3 style="grid-column: 1;">Tools</h3>
-            <img src="Icons/git.png" alt="" title="Git" width="75px" height="75px">
-            <img src="Icons/linux.png" alt="" title="Linux" width="75px" height="75px">
-            <img src="Icons/docker.png" alt="" title="Docker" width="75px" height="75px">
-            <h3 style="grid-column: 1;">Front-End</h3>
-            <img src="Icons/html.png" alt="" title="HTML" width="75px" height="75px">
-            <img src="Icons/css.png" alt="" title="CSS" width="75px" height="75px">
-            <img src="Icons/js.png" alt="" title="JavaScript" width="75px" height="75px">
-            <h3 style="grid-column: 1;">Back-End</h3>
-            <img src="Icons/c.png" alt="" title="C" width="75px" height="75px">
-            <img src="Icons/cpp.png" alt="" title="C++" width="75px" height="75px">
-            <img src="Icons/csh.png" alt="" title="C#" width="75px" height="75px">
-            <div></div>
-            <img src="Icons/java.png" alt="" title="Java" width="75px" height="75px">
-            <img src="Icons/python.png" alt="" title="Python" width="75px" height="75px">
-            <img src="Icons/sql.png" alt="" title="SQL" width="75px" height="75px">
-            <h2 style="grid-column: 1/-1;">Certifications</h2>
-            <a href="AWS Certified Developer - Associate.pdf" class="cert" style="grid-column: 1/-1;"> AWS Developer - Associate </a>
-        </div>
-    </section>
+	<section id="Landing">
+		<h1 id="title">Michael Jenkins</h1>
+		<div id="aboutbtn" onclick="About(true)"></div>
+		<div id="about">
+			<div>
+				<a target="_blank" rel="noreferrer" href="Resume.pdf">
+					<img src="Icons/Res.png" alt="Resume" srcset="" width="75px" height="75px">
+				</a>
+				<a target="_blank" rel="noreferrer" href="">
+					<img src="Icons/LIn.png" alt="LinkedIn" srcset="" width="75px" height="75px">
+				</a>
+				<a target="_blank" rel="noreferrer" href="mailto:maj4k@yahoo.com" width="75px" height="75px">
+					<img src="Icons/EMl.png" alt="Email" srcset="" width="75px" height="75px">
+				</a>
+			</div>
+			<h4>
+				I am a Full-Stack Developer who lives in Northern Virginia.
+				I have much experience in Networking and Cloud development.
+				I come from a background in Graphic Design and have a passion for Video Games.
+				Currently, I am working with Shaders and writing programs that require the GPU to do the work.
+			</h4>
+		</div>
+	</section>
+	<section id="Projects">
+		<div class="padd"></div>
+		<div class="card">
+			<h3>Disconnect: Dots</h3>
+			<h5 name="Godot, Android Studio"></h5>
+			<h4>Description</h4>
+			<p>
+				a connect the dots competitive game
+				launched on google play uses a LAN peer-to-peer
+				connection to connect with others.
+			</p>
+			<h4>Project Difficulties</h4>
+			<p>
+				creating functionality that deletes lines when
+				other players create a line over them.
+			</p>
+			<h4>Solution</h4>
+			<p>
+				translated a mathematical formula to detect
+				when lines are crossing and then deleting those
+				lines based on which lines are newly created
+			</p>
+			<div>
+				<a target="_blank" rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.maj.connection">
+				<img src="Icons/play.png" alt="demo" class="lbtn">
+				</a>
+			</div>
+		</div>
+		<div class="card">
+				<h3>Bug Logger</h3>
+				<h5 class="stack">
+					<p>AWS: Cognito, RDS, Lambda, API Gateway</p>
+					<p>HTML, CSS, JavaScript, Python, MySQL</p>
+					<p>JsonWebToken, Virtual Environments</p>
+				</h5>
+				<h4>Description</h4>
+				<p>
+					A bug logging app/API that uses Single Sign On
+					to allow the client to access data stored in a table.
+					Its purpose is to keep track of bugs that clients
+					would find in some software.
+				</p>
+				<h4>Project Difficulties</h4>
+				<p>
+					Starting out this project was difficult because
+					I didn't have a grasp on AWS API Gateway and
+					REST APIs and it took a week for me to learn
+					and understand enough to make significant
+					progress on the project.
+				</p>
+				<h4>Solution</h4>
+				<p>
+					Learning REST API's helped tramendously in making progress.
+					Also not necessary to the project, but virtual environments
+					helped make lambda programming and testing run smoothly.
+				</p>
+				<div>
+					<a target="_blank" rel="noopener" href="https://github.com/MAJ8K/BugTracker">
+					<img src="Icons/gith.png" alt="git" class="lbtn">
+					</a>
+					<a target="_blank" rel="noopener" href="https://buglogger.auth.us-east-1.amazoncognito.com/login?client_id=1bm0vf7d2j2nhpursafqgb0sqq&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https://majdevelopment.name/BugLogger/index.html">
+					<img src="Icons/www.png" alt="demo" class="lbtn">
+					</a>
+				</div>
+		</div>
+		<div class="card">
+				<h3><img src="Logos/OpenGL.png" alt="OpenGL"></h3>
+				<h5 class="stack"><p>C, C++, OpenGL API</p></h5>
+				<h4>Description</h4>
+				<p>
+					A 3D Graphics Renderer using OpenGL,
+					a graphics API used in many other 
+					graphics programs.
+					I have stopped working on this project to 
+					focus on developing with Vulkan.
+				</p>
+				<h4>Process</h4>
+				<p>
+					OpenGL was mostly straight forward aside from instancing.
+					However, currently I am trying to understand Vulkan's API
+					by reading through the documentationand experimenting
+					with the settings and functionsthe purpose is to create
+					a rendering engine for voxels.
+				</p>
+				<div>
+					<a target="_blank" rel="noopener" href="https://github.com/MAJ8K/OpenGL">
+					<img src="Icons/gith.png" alt="git" class="lbtn">
+					</a>
+					<a target="_blank" rel="noopener" href="https://youtu.be/T3a6PjLCODk">
+					<img src="Icons/yt.png" alt="demo" class="lbtn">
+					</a>
+				</div>
+		</div>
+		<div class="card">
+				<h3>Square Circle</h3>
+				<h5 class="stack">
+					<p>AWS: EC2, ALB</p>
+					<p>JavaScript, Matter.js, Python, docker</p>
+				</h5>
+				<h4>Description</h4>
+				<p>
+					a free online multiplayer game where you are a 
+					square shooting at squares. A progressive 
+					web app with controlls developed for mobile users.
+					This app does not account for cheaters.
+				</p>
+				<h4>Project Difficulties</h4>
+				<p>
+					Making the player stick to walls using Matter.JS
+					was a difficult solution to come up with and implement.
+					Creating and testing an SSL server was difficult because
+					i couldn't use my home computer as the testing environment.
+				</p>
+				<h4>Solution</h4>
+				<p>
+					Automating the development process seemed unneccessary until
+					I needed a testing solution for an SSL server.
+					Also docker containers helped with creating a reliable 
+					server Environment that can be autoscaled for player fluctuations.
+				</p>
+				<div>
+					<a target="_blank" rel="noopener" href="https://github.com/MAJ8K/Square-Circle">
+					<img src="Icons/gith.png" alt="git" class="lbtn">
+					</a>
+					<a target="_blank" rel="noopener" href="https://majdevelopment.name/SquareCircle/index.html">
+					<img src="Icons/www.png" alt="demo" class="lbtn">
+					</a>
+				</div>
+		</div>
+		<div class="padd"></div>
+	</section>
+	<section id="Footer">
+		<div id="fgrid">
+			<h2 style="grid-row: 1; grid-column: 1/-1;">Skills</h2>
+			<h3 style="grid-column: 1;">Tools</h3>
+			<img src="Icons/git.png" alt="" title="Git" width="75px" height="75px">
+			<img src="Icons/linux.png" alt="" title="Linux" width="75px" height="75px">
+			<img src="Icons/docker.png" alt="" title="Docker" width="75px" height="75px">
+			<h3 style="grid-column: 1;">Front-End</h3>
+			<img src="Icons/html.png" alt="" title="HTML" width="75px" height="75px">
+			<img src="Icons/css.png" alt="" title="CSS" width="75px" height="75px">
+			<img src="Icons/js.png" alt="" title="JavaScript" width="75px" height="75px">
+			<h3 style="grid-column: 1;">Back-End</h3>
+			<img src="Icons/c.png" alt="" title="C" width="75px" height="75px">
+			<img src="Icons/cpp.png" alt="" title="C++" width="75px" height="75px">
+			<img src="Icons/csh.png" alt="" title="C#" width="75px" height="75px">
+			<div></div>
+			<img src="Icons/java.png" alt="" title="Java" width="75px" height="75px">
+			<img src="Icons/python.png" alt="" title="Python" width="75px" height="75px">
+			<img src="Icons/sql.png" alt="" title="SQL" width="75px" height="75px">
+			<h2 style="grid-column: 1/-1;">Certifications</h2>
+			<a href="AWS Certified Developer - Associate.pdf" class="cert" style="grid-column: 1/-1;"> AWS Developer - Associate </a>
+		</div>
+	</section>
 </body>
 <script src="script.js" defer></script>
 </html>
