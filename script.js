@@ -1,49 +1,48 @@
-// const sections = document.getElementsByTagName('section');
-// const abtn = document.getElementById('aboutbtn');
-// const about = document.getElementById('about');
-// const cards = sections[1].getElementsByClassName('card');
-// const links = document.getElementsByTagName('a');
-// let h4s = document.getElementsByTagName('h4'); 
+const PROJECTS = document.getElementById('PROJECTS');
+var project_json = undefined;
+fetch('./projects.json')
+  .then((response) => response.json())
+  .then((json) => project_json = json)
+	.then(() => projectsFetched());
 
-// function About(show) {
-//     const condition = sections[1].classList.contains('active');
-//     sections[1].classList.remove('active');
-//     abtn.classList.remove('active');
-//     about.classList.remove('active');
-//     if (!show) return;
-//     if (!condition){ 
-//         sections[1].classList.add('active');
-//         abtn.classList.add('active');
-//         about.classList.add('active');
-//         window.scrollTo(0,0);
-//     }
-// }
+function projectsFetched() {
+	project_json.forEach(project => {
+		const card = document.createElement('div');
+		const title = document.createElement('h3');
+		const stack = document.createElement('h5');
+		const links = document.createElement('div');
+		card.appendChild(title);
+		card.appendChild(stack);
+		Object.entries(project["details"]).forEach(([key, value]) => {
+			const dtitle = document.createElement('h4');
+			const dtext = document.createElement('p');
+			dtitle.title = key;
+			dtext.innerText = value;
+			card.appendChild(dtitle);
+			card.appendChild(dtext);
+		});
+		card.appendChild(links);
+		card.classList.add('card');
 
-// for (const card of cards) {
-//     card.addEventListener('click', e => {
-//         focusCard(card);
-//     });
-// }
+		title.innerText = project["title"];
+		
+		stack.classList.add('stack');
+		project['stack'].forEach(sLine => {
+			const sItem = document.createElement('p');
+			sItem.title = sLine;
+			stack.appendChild(sItem);
+		});
 
-// function focusCard(id) {
-//     var cExpres = sections[1].clientWidth - cards[0].clientWidth;
-//     cExpres /= 2;
-//     window.scrollTo(0,sections[2].offsetTop/2);
-//     sections[1].scrollTo(id.offsetLeft - cExpres,0);
-// }
+		links.classList.add('links');
+		Object.entries(project["links"]).forEach(([key, value]) => {
+			const link = document.createElement('a');
+			const image = document.createElement('img');
+			link.appendChild(image);
+			link.href = key;
+			image.src = value;
+			links.appendChild(link);
+		});
 
-// for (const h4 of h4s) {
-//     h4.addEventListener('click', e => {
-//         for (const h41 of h4s) {
-//             h41.classList.remove('active');
-//         }
-//         if (h4.classList.contains('active')) {
-//             h4.classList.remove('active');
-//         }
-//         h4.classList.add('active');
-//     });
-// }
-// document.addEventListener('scroll', e => {
-//     About(false);
-// })
-
+		PROJECTS.appendChild(card);
+	});
+}

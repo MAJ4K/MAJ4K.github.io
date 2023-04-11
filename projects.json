@@ -1,0 +1,50 @@
+[
+	{
+		"title":"Dis/Connected",
+		"stack": [
+			"Godot, Android Studio"
+		],
+		"details":{
+			"Description":
+				"A connect the dots competitive game launched on google play uses a LAN peer-to-peer connection to connect with others.",
+			"Project Difficulties":
+				"Creating functionality that deletes lines when players try to disconnect eachother.",
+			"Solution":
+				"Used a mathematical formula to detect when lines are crossing, then deleted those lines based on the rules of the game."
+		},
+		"links":{
+			"https://play.google.com/store/apps/details?id=com.maj.connection":"Icons/play.png"
+		}
+	},
+	{
+		"title":"FutureKings Scholarship App",
+		"stack": [
+			"SQL, PWA"
+		],
+		"details":{
+			"Description":
+				"A progressive web app used to track scholarship application progress.",
+			"Process":
+				"Lead a team of students to workon the frontend portion of the PWA. Also worked on the cloud to compile, deliver, and track scholarship data."
+		},
+		"links":{
+		}
+	},
+	{
+		"title":"Mailing App",
+		"stack": [
+			"AWS: Lambda, API Gateway, SQS",
+			"Google Contacts",
+			"SQL, PWA, Python"
+		],
+		"details":{
+			"Description":
+				"An app used to send templatized mail to multiple recipients",
+			"Project Difficulties":
+				"Developing for high scalablility using AWS servicies. And tracing bugs in a cloud environment.",
+			"Solution":"used AWS built in services to notify me of failures. Also manually input data to find errors in individual services."
+		},
+		"links":{
+		}
+	}
+]
